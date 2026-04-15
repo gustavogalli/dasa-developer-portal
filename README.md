@@ -1,59 +1,114 @@
-# DeveloperPortal
+# 🚀 Developer Portal
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+Portal para desenvolvedores consumirem APIs, com documentação, sandbox interativo e gestão de aplicações em um fluxo único e intuitivo.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🧰 Tecnologias utilizadas
+
+* Angular 19
+* TypeScript
+* HTML5 + CSS3
+
+---
+
+## 📦 Pré-requisitos
+
+Antes de começar, você precisa ter instalado:
+
+* Node.js (recomendado: versão LTS)
+* npm (geralmente já vem com o Node)
+
+---
+
+## ▶️ Como rodar o projeto localmente
+
+Clone o repositório:
+
+```bash
+git clone <URL_DO_REPOSITORIO>
+```
+
+Acesse a pasta do projeto:
+
+```bash
+cd <NOME_DO_PROJETO>
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute a aplicação:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🌐 Acesse no navegador
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Abra:
 
-```bash
-ng generate component component-name
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
+
+## 📁 Estrutura do projeto
 
 ```bash
-ng generate --help
+src/
+ ├── app/
+ │   ├── components/   # Componentes reutilizáveis (header, footer, etc)
+ │   ├── pages/        # Páginas da aplicação (home, api-detail, etc)
+ │   ├── app.routes.ts # Configuração de rotas
+ │   └── app.component.ts
+ ├── assets/
+ └── styles.css
 ```
 
-## Building
+---
 
-To build the project run:
+## ✨ Funcionalidades
+
+* 🏠 Página inicial (Hero + apresentação)
+* 📚 Catálogo de APIs
+* 🔍 Detalhe da API com documentação
+* 🧪 Sandbox interativo (simulação de requests)
+* 🔐 Fluxo de autenticação (layout)
+* 📦 Gestão de aplicações (layout)
+
+---
+
+## 🛠️ Build para produção
+
+Para gerar a versão de produção:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Os arquivos serão gerados em:
 
 ```bash
-ng test
+dist/
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 📌 Observações
 
-```bash
-ng e2e
-```
+* Este projeto é **frontend-only**
+* As integrações com APIs estão simuladas (mock/layout)
+* Ideal para prototipação de portais de APIs e Developer Experience (DX)
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 👨‍💻 Autor
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Desenvolvido por Gustavo Galli
