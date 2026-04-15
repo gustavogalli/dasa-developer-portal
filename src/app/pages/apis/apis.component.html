@@ -1,0 +1,118 @@
+<section class="section" id="apis" data-page="apis">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Catalogo de APIs</p>
+          <h2>Cards escaneaveis, filtros prontos e foco em descoberta.</h2>
+        </div>
+        <p class="meta-note">Os filtros podem virar views ou componentes do Drupal sem alterar a estrutura do conteudo.</p>
+      </div>
+
+      <div class="surface-card">
+        <div class="catalog-toolbar">
+          <label class="input-label">
+            Buscar API
+            <input class="field" type="text" placeholder="Ex.: payments, patients, appointments" />
+          </label>
+
+          <label class="input-label">
+            Categoria
+            <select class="field-select">
+              <option>Todas</option>
+              <option>Financeiro</option>
+              <option>Clinico</option>
+              <option>Cadastro</option>
+            </select>
+          </label>
+
+          <label class="input-label">
+            Versao
+            <select class="field-select">
+              <option>Todas</option>
+              <option>v1</option>
+              <option>v2</option>
+              <option>beta</option>
+            </select>
+          </label>
+
+          <label class="input-label">
+            Tipo
+            <select class="field-select">
+              <option>REST</option>
+              <option>Webhook</option>
+              <option>GraphQL</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="catalog-grid">
+          <article class="catalog-card">
+            <div class="api-header">
+              <div>
+                <div class="api-icon">PG</div>
+                <h3>Payments API</h3>
+              </div>
+              <span class="badge badge-success">Ativo</span>
+            </div>
+
+            <p class="card-copy">Processamento e consulta de transacoes, conciliacao e status financeiro.</p>
+
+            <ul class="api-meta">
+              <li><strong>Categoria</strong><span>Financeiro</span></li>
+              <li><strong>Versao</strong><span>v2</span></li>
+              <li><strong>Tags</strong><span>payment, settlement, refunds</span></li>
+            </ul>
+
+            <div class="api-actions">
+              <a class="btn btn-primary" routerLink="api-detail">Ver documentacao</a>
+              <button class="btn btn-secondary" type="button">Adicionar aos favoritos</button>
+            </div>
+          </article>
+
+          <article class="catalog-card">
+            <div class="api-header">
+              <div>
+                <div class="api-icon">PT</div>
+                <h3>Patients API</h3>
+              </div>
+              <span class="badge badge-warning">Beta</span>
+            </div>
+
+            <p class="card-copy">Consulta de dados cadastrais e historico basico com regras de acesso por perfil.</p>
+
+            <ul class="api-meta">
+              <li><strong>Categoria</strong><span>Clinico</span></li>
+              <li><strong>Versao</strong><span>beta</span></li>
+              <li><strong>Tags</strong><span>patient, demographic, lookup</span></li>
+            </ul>
+
+            <div class="api-actions">
+              <button class="btn btn-secondary" type="button">Solicitar acesso</button>
+              <button class="btn btn-secondary" type="button">Ver changelog</button>
+            </div>
+          </article>
+
+          <article class="catalog-card">
+            <div class="api-header">
+              <div>
+                <div class="api-icon">AG</div>
+                <h3>Appointments API</h3>
+              </div>
+              <span class="badge badge-info">REST</span>
+            </div>
+
+            <p class="card-copy">Disponibilidade, slots e confirmacao de agendamento para parceiros integrados.</p>
+
+            <ul class="api-meta">
+              <li><strong>Categoria</strong><span>Operacional</span></li>
+              <li><strong>Versao</strong><span>v1</span></li>
+              <li><strong>Tags</strong><span>schedule, slots, booking</span></li>
+            </ul>
+
+            <div class="api-actions">
+              <button class="btn btn-primary" type="button">Abrir referencia</button>
+              <button class="btn btn-secondary" type="button">Copiar endpoint</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>

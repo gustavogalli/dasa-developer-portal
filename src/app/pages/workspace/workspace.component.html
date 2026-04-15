@@ -1,0 +1,155 @@
+<section class="section" id="workspace" data-page="workspace">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Area logada</p>
+          <h2>Dashboard com sidebar, atalhos de acao e visao operacional.</h2>
+        </div>
+        <div class="section-actions">
+          <span class="chip chip-success">Usuario aprovado</span>
+          <span class="chip chip-info">Plano Partner Plus</span>
+        </div>
+      </div>
+
+      <div class="portal-shell">
+        <div class="portal-layout">
+          <aside class="sidebar">
+            <div>
+              <p class="eyebrow">Workspace</p>
+              <h3>Developer Area</h3>
+              <p class="mini-copy">Navegacao principal para dashboard, APIs, apps e perfil.</p>
+            </div>
+
+            <nav aria-label="Menu da area logada">
+              <a class="sidebar-link is-active" routerLink="workspace" data-route="workspace">Dashboard</a>
+              <a class="sidebar-link" routerLink="apis" data-route="apis">Catalogo de APIs</a>
+              <a class="sidebar-link" routerLink="api-detail" data-route="api-detail">Detalhe + Sandbox</a>
+              <a class="sidebar-link" routerLink="apps" data-route="apps">Minhas aplicacoes</a>
+              <a class="sidebar-link" routerLink="profile" data-route="profile">Perfil</a>
+            </nav>
+
+            <div class="sidebar-card">
+              <strong>Taxa atual</strong>
+              <p class="mini-copy">1.250 chamadas hoje de um limite de 5.000 requests/dia.</p>
+            </div>
+
+            <div class="sidebar-card">
+              <strong>Governanca</strong>
+              <p class="mini-copy">Acesso liberado para APIs clinicas e agendamento. Financeiro segue restrito.</p>
+            </div>
+          </aside>
+
+          <div class="portal-main">
+            <div class="topbar">
+              <label class="searchbar">
+                <span>Buscar</span>
+                <input type="text" value="payments" aria-label="Buscar APIs e documentacao" />
+              </label>
+
+              <div class="topbar-profile">
+                <div class="avatar">TG</div>
+                <div>
+                  <strong>Thalyson Galdino</strong>
+                  <p class="mini-copy">Administrador tecnico da conta</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="access-banner alert alert-success">
+              <div>
+                <strong>Acesso ativo e pronto para integracao</strong>
+                <span class="helper">Voce ja pode gerar apps, copiar exemplos e testar endpoints protegidos por chave.</span>
+              </div>
+              <div class="inline-actions">
+                <a class="chip chip-success" routerLink="apps" data-route="apps">Gerar credenciais</a>
+                <a class="chip chip-info" routerLink="api-detail" data-route="api-detail">Testar API</a>
+              </div>
+            </div>
+
+            <div class="dashboard-metrics">
+              <article class="metric-card">
+                <strong>05</strong>
+                <span class="stat-caption">Apps criados no Apigee</span>
+                <p class="metric-trend">+2 este mes</p>
+              </article>
+
+              <article class="metric-card">
+                <strong>08</strong>
+                <span class="stat-caption">APIs habilitadas</span>
+                <p class="metric-trend">3 em beta</p>
+              </article>
+
+              <article class="metric-card">
+                <strong>99.97%</strong>
+                <span class="stat-caption">Disponibilidade 30 dias</span>
+                <p class="metric-trend">SLA operacional dentro da meta</p>
+              </article>
+
+              <article class="metric-card">
+                <strong>184 ms</strong>
+                <span class="stat-caption">Tempo medio no sandbox</span>
+                <p class="metric-trend">-12 ms vs. semana passada</p>
+              </article>
+            </div>
+
+            <div class="two-column">
+              <article class="shell-card">
+                <div class="subsection-heading">
+                  <div>
+                    <h3>Atalhos de trabalho</h3>
+                    <p class="card-copy">Entradas mais frequentes para quem ja esta integrando.</p>
+                  </div>
+                </div>
+
+                <div class="benefit-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+                  <div class="section-card">
+                    <h3>Minhas APIs</h3>
+                    <p class="card-copy">Veja escopos liberados, beta programs e mudancas de versao.</p>
+                  </div>
+                  <div class="section-card">
+                    <h3>Testar APIs</h3>
+                    <p class="card-copy">Use o sandbox para validar parametros, headers e payloads.</p>
+                  </div>
+                  <div class="section-card">
+                    <h3>Documentacao</h3>
+                    <p class="card-copy">Acesse endpoints, exemplos em curl e schemas de resposta.</p>
+                  </div>
+                  <div class="section-card">
+                    <h3>Suporte tecnico</h3>
+                    <p class="card-copy">Abra uma solicitacao com contexto do request e status code.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="shell-card">
+                <div class="subsection-heading">
+                  <div>
+                    <h3>Credencial ativa</h3>
+                    <p class="card-copy">Resumo rapido da ultima aplicacao usada.</p>
+                  </div>
+                  <span class="badge badge-success">Production Ready</span>
+                </div>
+
+                <ul class="token-list">
+                  <li>
+                    <strong>Aplicacao</strong>
+                    <span class="token-value">Portal Parceiro Saude</span>
+                  </li>
+                  <li>
+                    <strong>Client ID</strong>
+                    <span class="token-value">dasa-portal-parceiro-9h27f31</span>
+                  </li>
+                  <li>
+                    <strong>Ultima rotacao</strong>
+                    <span class="token-value">18 Mar 2026, 11:45</span>
+                  </li>
+                  <li>
+                    <strong>Escopos</strong>
+                    <span class="token-value">appointments.read, patients.read</span>
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

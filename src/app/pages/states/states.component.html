@@ -1,0 +1,77 @@
+<section class="section" id="states" data-page="states">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Estados e feedbacks</p>
+          <h2>Estados essenciais para loading, erro, vazio e indisponibilidade.</h2>
+        </div>
+        <p class="meta-note">Importante para a experiencia real do portal e para a consistencia visual do produto.</p>
+      </div>
+
+      <div class="states-grid">
+        <article class="state-card">
+          <div class="card-head">
+            <div>
+              <h3>Loading</h3>
+              <p class="card-copy">Enquanto lista de APIs ou teste de request esta sendo processado.</p>
+            </div>
+            <span class="badge badge-info">Carregando</span>
+          </div>
+
+          <div class="state-icon">...</div>
+          <p class="card-copy">Skeletons e blocos de placeholder mantem a estrutura previsivel sem depender de animacoes complexas.</p>
+          <div class="state-actions">
+            <span class="chip chip-info">APIs</span>
+            <span class="chip chip-info">Sandbox</span>
+          </div>
+        </article>
+
+        <article class="state-card">
+          <div class="card-head">
+            <div>
+              <h3>Usuario nao aprovado</h3>
+              <p class="card-copy">Bloqueio de criacao de apps e uso de endpoints protegidos.</p>
+            </div>
+            <span class="badge badge-warning">Pendente</span>
+          </div>
+
+          <div class="state-icon">UA</div>
+          <p class="card-copy">Banner contextual com SLA, proximo passo e CTA para falar com o administrador interno.</p>
+          <div class="state-actions">
+            <span class="chip chip-warning">Aguardando revisao</span>
+          </div>
+        </article>
+
+        <article class="state-card">
+          <div class="card-head">
+            <div>
+              <h3>API indisponivel</h3>
+              <p class="card-copy">Quando o endpoint ou ambiente estiver em manutencao.</p>
+            </div>
+            <span class="badge badge-warning">Maintenance</span>
+          </div>
+
+          <div class="state-icon">503</div>
+          <p class="card-copy">Mensagem clara com status page, impacto do incidente e recomendacao para retry controlado.</p>
+          <div class="state-actions">
+            <span class="chip chip-warning">Status page</span>
+            <span class="chip chip-danger">Retry depois</span>
+          </div>
+        </article>
+
+        <article class="state-card">
+          <div class="card-head">
+            <div>
+              <h3>Estado vazio</h3>
+              <p class="card-copy">Quando o usuario ainda nao possui apps, favoritos ou historico.</p>
+            </div>
+            <span class="badge badge-success">Empty</span>
+          </div>
+
+          <div class="state-icon">0</div>
+          <p class="card-copy">Cards com acao primaria objetiva para criar a primeira aplicacao ou explorar APIs habilitadas.</p>
+          <div class="state-actions">
+            <span class="chip chip-success">Criar app</span>
+          </div>
+        </article>
+      </div>
+    </section>

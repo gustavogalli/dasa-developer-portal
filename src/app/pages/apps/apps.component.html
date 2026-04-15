@@ -1,0 +1,80 @@
+<section class="section" id="apps" data-page="apps">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Minhas aplicacoes</p>
+          <h2>Gestao de apps e credenciais com foco em seguranca.</h2>
+        </div>
+        <div class="section-actions">
+          <button class="btn btn-primary" type="button">Criar aplicacao</button>
+          <button class="btn btn-secondary" type="button">Revogar chave</button>
+        </div>
+      </div>
+
+      <div class="apps-grid">
+        <article class="app-card">
+          <div class="card-head">
+            <div>
+              <h3>Portal Parceiro Saude</h3>
+              <p class="card-copy">Aplicacao principal para ambientes de homologacao e producao.</p>
+            </div>
+            <span class="badge badge-success">Ativa</span>
+          </div>
+
+          <div class="credential-block">
+            <div class="credential-line">
+              <strong>Client ID</strong>
+              <div class="credential-value">dasa-portal-parceiro-9h27f31</div>
+            </div>
+
+            <div class="credential-line">
+              <strong>Client Secret</strong>
+              <div class="credential-value" id="client-secret">••••••••••••••••••••••</div>
+            </div>
+          </div>
+
+          <div class="credential-actions">
+            <button class="copy-button" type="button" data-secret-toggle>Mostrar secret</button>
+            <button class="copy-button" type="button">Copiar client ID</button>
+            <button class="copy-button" type="button">Rotacionar</button>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="card-head">
+            <div>
+              <h3>Novo app no portal</h3>
+              <p class="card-copy">Estado de criacao assistida para onboarding de novos parceiros.</p>
+            </div>
+            <span class="badge badge-info">Draft</span>
+          </div>
+
+          <div class="input-grid">
+            <label class="input-label">
+              Nome da aplicacao
+              <input class="field" type="text" placeholder="Ex.: Integrador Lab Partner" />
+            </label>
+
+            <label class="input-label">
+              APIs solicitadas
+              <select class="field-select">
+                <option>Payments API + Appointments API</option>
+                <option>Patients API</option>
+                <option>Catalogo completo</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="alert alert-warning">
+            <div>
+              <strong>Dependencia de aprovacao</strong>
+              <span class="helper">Novos escopos podem exigir revisao adicional antes da emissao da chave.</span>
+            </div>
+          </div>
+
+          <div class="inline-actions">
+            <button class="btn btn-primary" type="button">Gerar chave no Apigee</button>
+            <button class="btn btn-secondary" type="button">Salvar como rascunho</button>
+          </div>
+        </article>
+      </div>
+    </section>

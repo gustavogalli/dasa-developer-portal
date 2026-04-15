@@ -1,0 +1,260 @@
+<section class="section" id="api-detail" data-page="api-detail">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Detalhe da API</p>
+      <h2>Documentacao e sandbox no mesmo fluxo de uso.</h2>
+    </div>
+    <div class="section-actions">
+      <span class="method-pill post">POST</span>
+      <span class="chip chip-success">Protegida por API key</span>
+      <span class="chip chip-info">Rate limit: 200 rpm</span>
+    </div>
+  </div>
+
+  <div class="detail-layout">
+    <article class="surface-card">
+      <div class="api-detail-header">
+        <p class="eyebrow">Payments API / Create charge</p>
+        <h3>Criar cobranca com idempotencia, payload validado e headers obrigatorios.</h3>
+        <p class="card-copy">
+          Core do portal: endpoint, parametros, exemplos e guias tecnicos acessiveis no mesmo contexto.
+        </p>
+      </div>
+
+      <div class="tab-list" role="tablist" aria-label="Conteudo da API">
+        <button class="tab-button is-active" type="button" data-tab-target="docs" aria-selected="true">Documentacao</button>
+        <button class="tab-button" type="button" data-tab-target="test">Testar</button>
+        <button class="tab-button" type="button" data-tab-target="examples">Exemplos</button>
+      </div>
+
+      <div class="tab-panel is-active" id="tab-docs" data-tab-panel="docs">
+        <div class="detail-grid">
+          <div class="table-card">
+            <div class="card-head">
+              <div>
+                <h3>Resumo tecnico</h3>
+                <p class="card-copy">Campos e contratos que o desenvolvedor precisa bater o olho e usar.</p>
+              </div>
+            </div>
+
+            <ul class="api-meta">
+              <li><strong>Endpoint</strong><span class="token-value">POST /v2/payments/charges</span></li>
+              <li><strong>Autenticacao</strong><span>Header <span class="token-value">x-api-key</span></span></li>
+              <li><strong>Headers</strong><span><span class="token-value">Content-Type</span>, <span class="token-value">x-correlation-id</span></span></li>
+              <li><strong>Response</strong><span>201 Created com objeto <span class="token-value">charge</span></span></li>
+            </ul>
+          </div>
+
+          <div class="table-card">
+            <div class="card-head">
+              <div>
+                <h3>Parametros</h3>
+                <p class="card-copy">Estrutura de request preparada para leitura rapida.</p>
+              </div>
+            </div>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Campo</th>
+                  <th>Tipo</th>
+                  <th>Descricao</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="token-value">amount</span></td>
+                  <td>number</td>
+                  <td>Valor total em centavos.</td>
+                </tr>
+                <tr>
+                  <td><span class="token-value">currency</span></td>
+                  <td>string</td>
+                  <td>Moeda ISO, ex.: BRL.</td>
+                </tr>
+                <tr>
+                  <td><span class="token-value">customer.id</span></td>
+                  <td>string</td>
+                  <td>Identificador do cliente parceiro.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="code-panel" data-copy-target="curl-example">
+          <div class="code-head">
+            <div>
+              <h3>Exemplo de request</h3>
+              <p class="card-copy">Snippet pronto para a primeira integracao.</p>
+            </div>
+            <button class="copy-button" type="button" data-copy-button="curl-example">Copiar curl</button>
+          </div>
+
+          <pre class="code-block" id="curl-example">curl --request POST "https://api.sandbox.dasa.com/v2/payments/charges" \
+  --header "Content-Type: application/json" \
+  --header "x-api-key: &lt;YOUR_API_KEY&gt;" \
+  --header "x-correlation-id: demo-001" \
+  --data '{{ "{" }}
+    "amount": 12990,
+    "currency": "BRL",
+    "customer": {{ "{" }}
+      "id": "cus_21931"
+    {{ "}" }}
+  {{ "}" }}'</pre>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-test" data-tab-panel="test">
+        <div class="shell-card">
+          <div class="subsection-heading">
+            <div>
+              <h3>Fluxo de teste</h3>
+              <p class="card-copy">Preview da aba "Testar" dentro da pagina da API.</p>
+            </div>
+          </div>
+
+          <ul class="bullet-list">
+            <li>Selecao de metodo e endpoint sempre visiveis no topo.</li>
+            <li>Campos editaveis para params, headers e body.</li>
+            <li>Resposta separada por status, tempo, payload e headers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-examples" data-tab-panel="examples">
+        <div class="detail-grid">
+          <div class="surface-card">
+            <h3>Exemplos de uso</h3>
+            <ul class="bullet-list">
+              <li>Criar cobranca avulsa.</li>
+              <li>Consultar status de processamento.</li>
+              <li>Tratar recusas por regra de negocio.</li>
+            </ul>
+          </div>
+
+          <div class="surface-card">
+            <h3>Boas praticas</h3>
+            <ul class="bullet-list">
+              <li>Use idempotencia para evitar duplicidade.</li>
+              <li>Envie correlation id em todos os requests.</li>
+              <li>Monitore status 4xx e 5xx com retries controlados.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <aside class="sandbox-panel">
+      <article class="surface-card">
+        <div class="card-head">
+          <div>
+            <h3>Sandbox interativo</h3>
+            <p class="card-copy">Area Swagger-like com feedback visual imediato.</p>
+          </div>
+          <span class="chip chip-info">Ambiente sandbox</span>
+        </div>
+
+        <div class="sandbox-toolbar">
+          <select class="field-select" id="sandbox-method">
+            <option value="201">POST</option>
+            <option value="200">GET</option>
+            <option value="400">PUT</option>
+            <option value="500">DELETE</option>
+          </select>
+          <div class="field-inline">/v2/payments/charges</div>
+          <button class="btn btn-primary" type="button" id="run-sandbox">Executar</button>
+        </div>
+
+        <div class="input-grid">
+          <label class="input-label">
+            Headers
+            <textarea class="field-textarea" id="headers-input">{{ "{" }}
+  "x-api-key": "sk_sandbox_7421",
+  "x-correlation-id": "demo-001"
+{{ "}" }}</textarea>
+          </label>
+
+          <label class="input-label">
+            Body
+            <textarea class="field-textarea" id="body-input">{{ "{" }}
+  "amount": 12990,
+  "currency": "BRL",
+  "customer": {{ "{" }}
+    "id": "cus_21931"
+  {{ "}" }}
+{{ "}" }}</textarea>
+          </label>
+        </div>
+      </article>
+
+      <article class="response-card">
+        <div class="response-head">
+          <div>
+            <h3>Resposta</h3>
+            <p class="card-copy">Status code, tempo, payload e headers destacados.</p>
+          </div>
+          <div class="response-status" id="response-status">
+            <span class="status-dot" id="status-dot"></span>
+            <span id="status-label">201 Created</span>
+          </div>
+        </div>
+
+        <div class="response-grid">
+          <div class="response-stat">
+            <strong id="response-code">201</strong>
+            <span class="mini-copy">HTTP status</span>
+          </div>
+          <div class="response-stat">
+            <strong id="response-time">184 ms</strong>
+            <span class="mini-copy">Tempo de resposta</span>
+          </div>
+          <div class="response-stat">
+            <strong id="response-env">Sandbox</strong>
+            <span class="mini-copy">Ambiente</span>
+          </div>
+        </div>
+
+        <pre class="response-json" id="response-payload">{{ "{" }}
+  "status": "success",
+  "charge_id": "ch_102983",
+  "amount": 12990,
+  "currency": "BRL",
+  "received_at": "2026-03-25T14:08:51Z"
+{{ "}" }}</pre>
+
+        <div class="table-card" style="margin-top: 16px; padding: 18px;">
+          <div class="card-head">
+            <div>
+              <h3>Headers da resposta</h3>
+              <p class="card-copy">Visibilidade clara para troubleshooting tecnico.</p>
+            </div>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Header</th>
+                <th>Valor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="token-value">content-type</span></td>
+                <td>application/json</td>
+              </tr>
+              <tr>
+                <td><span class="token-value">x-rate-limit-remaining</span></td>
+                <td>183</td>
+              </tr>
+              <tr>
+                <td><span class="token-value">x-request-id</span></td>
+                <td><span class="token-value">req_82df0911</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </aside>
+  </div>
+</section>

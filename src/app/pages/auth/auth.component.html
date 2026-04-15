@@ -1,0 +1,118 @@
+<section class="section" id="auth" data-page="auth">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Autenticacao</p>
+          <h2>Cadastro, login e aprovacao com mensagens transparentes.</h2>
+        </div>
+        <p class="meta-note">O fluxo deixa claro que o acesso as APIs depende da validacao manual do usuario.</p>
+      </div>
+
+      <div class="auth-grid">
+        <article class="auth-card">
+          <div class="card-head">
+            <div>
+              <h3>Login</h3>
+              <p class="card-copy">Para parceiros e desenvolvedores ja aprovados.</p>
+            </div>
+            <span class="chip chip-info">Acesso seguro</span>
+          </div>
+
+          <div class="input-grid">
+            <label class="input-label">
+              Email corporativo
+              <input class="field" type="email" placeholder="nome@empresa.com.br" />
+            </label>
+
+            <label class="input-label">
+              Senha
+              <input class="field" type="password" placeholder="Digite sua senha" />
+            </label>
+          </div>
+
+          <div class="alert alert-danger">
+            <div>
+              <strong>Erro de autenticacao</strong>
+              <span class="helper">Email ou senha invalidos. Tente novamente ou redefina a senha.</span>
+            </div>
+            <a class="chip chip-danger" routerLink="profile">Esqueci minha senha</a>
+          </div>
+
+          <div class="inline-actions">
+            <button class="btn btn-primary" type="button">Entrar</button>
+            <button class="btn btn-secondary" type="button">SSO parceiro</button>
+          </div>
+        </article>
+
+        <article class="auth-card">
+          <div class="card-head">
+            <div>
+              <h3>Registro</h3>
+              <p class="card-copy">Formulario orientado para triagem e aprovacao manual.</p>
+            </div>
+            <span class="chip">Novo cadastro</span>
+          </div>
+
+          <div class="input-grid two-col">
+            <label class="input-label">
+              Nome
+              <input class="field" type="text" placeholder="Nome completo" />
+            </label>
+
+            <label class="input-label">
+              Empresa
+              <input class="field" type="text" placeholder="Empresa ou parceiro" />
+            </label>
+
+            <label class="input-label">
+              Email corporativo
+              <input class="field" type="email" placeholder="nome@empresa.com" />
+            </label>
+
+            <label class="input-label">
+              Area de interesse
+              <select class="field-select">
+                <option>Integracoes clinicas</option>
+                <option>Financeiro</option>
+                <option>Cadastro e identidade</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="input-label">
+            Motivo de uso
+            <textarea class="field-textarea" placeholder="Ex.: Integrar agendamento e elegibilidade ao nosso portal parceiro."></textarea>
+            <small>Mensagem exibida: sua conta sera analisada antes da liberacao.</small>
+          </label>
+
+          <div class="inline-actions">
+            <button class="btn btn-primary" type="button">Enviar para analise</button>
+            <span class="status-inline">SLA estimado: ate 24h.</span>
+          </div>
+        </article>
+
+        <article class="state-card">
+          <div class="card-head">
+            <div>
+              <h3>Estado pos-registro</h3>
+              <p class="card-copy">Tela de confirmacao com proximo passo visivel.</p>
+            </div>
+            <span class="badge badge-warning">Em analise</span>
+          </div>
+
+          <div class="state-icon">SLA</div>
+
+          <div>
+            <strong>Aguardando aprovacao do administrador</strong>
+            <p class="card-copy">
+              Seu cadastro foi recebido. Voce sera avisado por email assim que o acesso ao portal e as APIs for liberado.
+            </p>
+          </div>
+
+          <ul class="bullet-list">
+            <li>Checklist de documentos ou contrato pode aparecer aqui.</li>
+            <li>Status de aprovacao visivel tambem no perfil do usuario.</li>
+            <li>Bloqueio de criacao de apps enquanto o acesso estiver pendente.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
